@@ -23,9 +23,16 @@
             "aot": true,
             "assets": [
               "apps/insure-landing-page/src/favicon.ico",
-              "apps/insure-landing-page/src/assets"
+              "apps/insure-landing-page/src/assets",
+              {
+                "input": "libs/insure-landing-page/shared/assets/src/lib/images",
+                "glob": "*",
+                "output": "assets/images"
+              }
             ],
-            "styles": ["apps/insure-landing-page/src/styles.scss"],
+            "styles": [
+              "apps/insure-landing-page/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +90,10 @@
               "apps/insure-landing-page/tsconfig.app.json",
               "apps/insure-landing-page/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/insure-landing-page/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/insure-landing-page/**"
+            ]
           }
         },
         "test": {
@@ -118,11 +128,42 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/insure-landing-page-e2e/tsconfig.e2e.json"],
+            "tsConfig": [
+              "apps/insure-landing-page-e2e/tsconfig.e2e.json"
+            ],
             "exclude": [
               "**/node_modules/**",
               "!apps/insure-landing-page-e2e/**"
             ]
+          }
+        }
+      }
+    },
+    "insure-landing-page-shared-assets": {
+      "root": "libs/insure-landing-page/shared/assets",
+      "sourceRoot": "libs/insure-landing-page/shared/assets/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/insure-landing-page/shared/assets/tsconfig.lib.json",
+              "libs/insure-landing-page/shared/assets/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/insure-landing-page/shared/assets/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/insure-landing-page/shared/assets/jest.config.js",
+            "tsConfig": "libs/insure-landing-page/shared/assets/tsconfig.spec.json",
+            "passWithNoTests": true
           }
         }
       }

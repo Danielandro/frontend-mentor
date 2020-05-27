@@ -25,6 +25,9 @@
     "insure-landing-page-e2e": {
       "tags": [],
       "implicitDependencies": ["insure-landing-page"]
+    },
+    "insure-landing-page-shared-assets": {
+      "tags": []
     }
   }
 }
