@@ -1,0 +1,21 @@
+$breakpoints: (
+  mobile: 375px,
+  desktop: 1440px,
+);
+
+// apply mixin if page is below breakpoint given
+@mixin respond-above($breakpoint) {
+  // if given breakpoint exists in map
+  @if (map-has-key($breakpoints, $breakpoint)) {
+    // get the breakpoint
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // define media query
+    @media (min-width: $breakpoint-value) {
+      // https://sass-lang.com/documentation/at-rules/mixin#content-blocks
+      // this content block is replaced by styles
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}';
+  }
+}

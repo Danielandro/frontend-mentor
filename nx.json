@@ -14,19 +14,33 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
   "projects": {
     "insure-landing-page": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": [
+        "insure-landing-page-shared-assets",
+        "insure-landing-page-shared-styles"
+      ]
     },
     "insure-landing-page-e2e": {
       "tags": [],
-      "implicitDependencies": ["insure-landing-page"]
+      "implicitDependencies": [
+        "insure-landing-page"
+      ]
     },
     "insure-landing-page-shared-assets": {
+      "tags": []
+    },
+    "insure-landing-page-shared-styles": {
       "tags": []
     }
   }

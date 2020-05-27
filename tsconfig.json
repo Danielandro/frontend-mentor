@@ -18,6 +18,9 @@
     "paths": {
       "@frontend-mentor/insure-landing-page/shared/assets": [
         "libs/insure-landing-page/shared/assets/src/index.ts"
+      ],
+      "@frontend-mentor/insure-landing-page/shared/styles": [
+        "libs/insure-landing-page/shared/styles/src/index.ts"
       ]
     }
   },

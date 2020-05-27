@@ -33,6 +33,11 @@
             "styles": [
               "apps/insure-landing-page/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/insure-landing-page/shared/styles/src/lib"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -163,6 +168,35 @@
           "options": {
             "jestConfig": "libs/insure-landing-page/shared/assets/jest.config.js",
             "tsConfig": "libs/insure-landing-page/shared/assets/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "insure-landing-page-shared-styles": {
+      "root": "libs/insure-landing-page/shared/styles",
+      "sourceRoot": "libs/insure-landing-page/shared/styles/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/insure-landing-page/shared/styles/tsconfig.lib.json",
+              "libs/insure-landing-page/shared/styles/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/insure-landing-page/shared/styles/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/insure-landing-page/shared/styles/jest.config.js",
+            "tsConfig": "libs/insure-landing-page/shared/styles/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
