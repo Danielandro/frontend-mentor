@@ -1,118 +1,186 @@
-<header class="flex">
-  <img
-    alt="Nx logo"
-    width="75"
-    src="https://nx.dev/assets/images/nx-logo-white.svg"
-  />
-  <h1>Welcome to {{ title }}!</h1>
-</header>
-<main>
-  <h2>Resources &amp; Tools</h2>
-  <p>
-    Thank you for using and showing some ♥ for Nx.
-  </p>
-  <div class="flex github-star-container">
-    <a
-      href="https://github.com/nrwl/nx"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      If you like Nx, please give it a star:
-      <div class="github-star-badge">
-        <svg
-          class="material-icons"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-          />
-        </svg>
-        Star
-      </div>
+<!-- Main header / top nav -->
+<nav class="nav-header">
+  <h2 class="nav--title">Insure</h2>
+  <!-- nav menu -->
+  <div class="nav-header--menu">
+    <ul class="menu">
+      <li class="menu--item"><a href="#"
+           class="item__link">How we work</a></li>
+      <li class="menu--item"><a href="#"
+           class="item__link">Blog</a></li>
+      <li class="menu--item"><a href="#"
+           class="item__link">Account</a></li>
+      <li class="menu--item">
+        <button class="button__link">View plans</button>
+      </li>
+    </ul>
+    <a href="#"
+       class="menu__toggle">
+      <object data="assets/images/icon-hamburger.svg"
+              type="image/svg+xml"
+              class="icon-hamburger"></object>
     </a>
   </div>
-  <p>
-    Here are some links to help you get started.
-  </p>
-  <ul class="resources">
-    <li class="col-span-2">
-      <a
-        class="resource flex"
-        href="https://connect.nrwl.io/app/courses/nx-workspaces/intro"
-      >
-        Nx video course
-      </a>
-    </li>
-    <li class="col-span-2">
-      <a
-        class="resource flex"
-        href="https://nx.dev/angular/getting-started/what-is-nx"
-      >
-        Nx video tutorial
-      </a>
-    </li>
-    <li class="col-span-2">
-      <a
-        class="resource flex"
-        href="https://nx.dev/angular/tutorial/01-create-application"
-      >
-        Interactive tutorial
-      </a>
-    </li>
-    <li class="col-span-2">
-      <a class="resource flex" href="https://nx.app/">
-        <svg
-          width="36"
-          height="36"
-          viewBox="0 0 120 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M120 15V30C103.44 30 90 43.44 90 60C90 76.56 76.56 90 60 90C43.44 90 30 103.44 30 120H15C6.72 120 0 113.28 0 105V15C0 6.72 6.72 0 15 0H105C113.28 0 120 6.72 120 15Z"
-            fill="#0E2039"
-          />
-          <path
-            d="M120 30V105C120 113.28 113.28 120 105 120H30C30 103.44 43.44 90 60 90C76.56 90 90 76.56 90 60C90 43.44 103.44 30 120 30Z"
-            fill="white"
-          />
-        </svg>
-        <span class="gutter-left">Nx Cloud</span>
-      </a>
-    </li>
-  </ul>
-  <h2>Next Steps</h2>
-  <p>Here are some things you can do with Nx.</p>
-  <details open>
-    <summary>Add UI library</summary>
-    <pre>
-# Generate UI lib
-ng g @nrwl/angular:lib ui
+</nav>
+<!-- main section -->
+<main>
+  <!-- hero section -->
+  <section class="hero">
+    <div class="img-container">
+      <img src="assets/images/image-intro-mobile.jpg"
+           alt="A family of four walking together">
+    </div>
+    <div class="hero--body">
+      <h1 class="title">Humanizing your insurance.</h1>
+      <div class="text">
+        Get your life insurance coverage easier and faster. We blend our expertise
+        and technology to help you find the plan that’s right for you. Ensure you
+        and your loved ones are protected.
+      </div>
 
-# Add a component
-ng g @nrwl/angular:component xyz --project ui</pre
-    >
-  </details>
-  <details>
-    <summary>View dependency graph</summary>
-    <pre>nx dep-graph</pre>
-  </details>
-  <details>
-    <summary>Run affected commands</summary>
-    <pre>
-# see what's been affected by changes
-ng affected:dep-graph
+      <button class="button__link">View plans</button>
+    </div>
 
-# run tests for current changes
-ng affected:test
+  </section>
+  <!-- info section -->
+  <section class="main-info">
+    <h2 class="title">We’re different</h2>
+    <!-- info cards -->
+    <div class="info">
+      <div class="info--content">
+        <object data="assets/images/icon-snappy-process.svg"
+                type="image/svg+xml"
+                class="icon-snappy-process"></object>
+        <h3 class="info--title">Snappy Process</h3>
+        <p class="info--text">Our application process can be completed in minutes, not hours. Don’t get
+          stuck filling in tedious forms.</p>
+      </div>
+      <div class="info--content">
+        <object data="assets/images/icon-affordable-prices.svg"
+                type="image/svg+xml"
+                class="icon-affordable-prices"></object>
+        <h3 class="info--title">Affordable Prices</h3>
+        <p class="info--text">We don’t want you worrying about high monthly costs. Our prices may be low,
+          but we still offer the best coverage possible.</p>
+      </div>
+      <div class="info--content">
+        <object data="assets/images/icon-people-first.svg"
+                type="image/svg+xml"
+                class="icon-people-first"></object>
+        <h3 class="info--title">People First</h3>
+        <p class="info--text">Our plans aren’t full of conditions and clauses to prevent payouts. We make
+          sure you’re covered when you need it.</p>
+      </div>
+    </div>
 
-# run e2e tests for current changes
-ng affected:e2e
-</pre
-    >
-  </details>
+    <!-- how we work card -->
+    <div class="find-out-more">
+      <h2 class="title">Find out more about how we work</h2>
+      <button class="button__link">How we work</button>
+    </div>
+  </section>
 </main>
+
+<!-- footer nav -->
+<nav class="nav-footer">
+  <!-- socials -->
+  <div class="socials">
+    <h2 class="nav--title">Insure</h2>
+    <ul class="social-links">
+      <li class="social-link">
+        <a href="#"
+           class="item__link">
+          <object data="assets/images/icon-facebook.svg"
+                  type="image/svg+xml"
+                  class="icon-facebook"></object>
+        </a>
+      </li>
+      <li class="social-link">
+        <a href="#"
+           class="item__link">
+          <object data="assets/images/icon-twitter.svg"
+                  type="image/svg+xml"
+                  class="icon-twitter"></object>
+        </a>
+      </li>
+      <li class="social-link">
+        <a href="#"
+           class="item__link">
+          <object data="assets/images/icon-pinterest.svg"
+                  type="image/svg+xml"
+                  class="icon-pinterest"></object>
+        </a>
+      </li>
+      <li class="social-link">
+        <a href="#"
+           class="item__link">
+          <object data="assets/images/icon-instagram.svg"
+                  type="image/svg+xml"
+                  class="icon-instagram"></object>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- footer nav sitemap -->
+  <div class="sitemap">
+    <!-- our company -->
+    <div class="sitemap--section">
+      <p class="section--title">Our company</p>
+      <ul class="section--links">
+        <li class="section--link"><a href="#"
+             class="link--text">How we work</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Why Insure?</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">View plans</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Reviews</a></li>
+      </ul>
+    </div>
+    <!-- help me -->
+    <div class="sitemap--section">
+      <p class="section--title">Help me</p>
+      <ul class="section--links">
+        <li class="section--link"><a href="#"
+             class="link--text">FAQ</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Terms of use</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Privacy policy</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Cookies</a></li>
+      </ul>
+    </div>
+    <!-- contact -->
+    <div class="sitemap--section">
+      <p class="section--title">Contact</p>
+      <ul class="section--links">
+        <li class="section--link"><a href="#"
+             class="link--text">Sales</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Support</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Live chat</a></li>
+      </ul>
+    </div>
+    <!-- others -->
+    <div class="sitemap--section">
+      <p class="section--title">Others</p>
+      <ul class="section--links">
+        <li class="section--link"><a href="#"
+             class="link--text">Careers</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Press</a></li>
+        <li class="section--link"><a href="#"
+             class="link--text">Licenses</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- attributions -->
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+     target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Your Name Here</a>.
+</div>
