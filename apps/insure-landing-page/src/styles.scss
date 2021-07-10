@@ -9,8 +9,9 @@
 
 html,
 body {
-  font-family: $font-primary;
-  font-size: $font-size-main;
+  @include set-primary-font;
+  margin: 0;
+  padding: 0;
 }
 
 h1,

@@ -1,0 +1,44 @@
+@use 'variables' as *;
+.nav-top {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  position: relative;
+  // margin: 20px 23px;
+
+  .img-logo {
+    padding: 30px 23px;
+  }
+
+  &--menu {
+    background-color: map-get($map: $colors-primary, $key: dark-violet);
+    text-align: center;
+    height: 100vh;
+    display: none;
+    .menu--links {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      .menu--link {
+        // display: inline-block;
+        padding-top: 50px;
+        .item__link {
+          text-decoration: none;
+          color: map-get($map: $colors-neutral, $key: very-light-gray);
+          font-size: 1.2em;
+          text-transform: uppercase;
+          display: block;
+        }
+      }
+    }
+  }
+  .menu__toggle {
+    position: absolute;
+    top: 24px;
+    right: 23px;
+    .icon-hamburger {
+      pointer-events: none;
+    }
+  }
+}

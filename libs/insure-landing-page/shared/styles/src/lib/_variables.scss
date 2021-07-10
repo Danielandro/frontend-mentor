@@ -1,7 +1,25 @@
 // FONTS
-$font-primary: 'Karla, sans-serif';
-$font-header: 'DM Serif Display, serif';
+$font-primary: 'Karla', sans-serif;
+$font-header: 'DM Serif Display', serif;
 $font-size-main: 16px;
+$font-weights: (
+  regular: 400,
+  bold: 900,
+);
+
+@mixin set-font-weight($weight) {
+  @if (map-has-key($map: $font-weights, $key: $weight)) {
+    font-weight: map-get($map: $font-weights, $key: $weight);
+  } @else {
+    @warn 'Font weight not defined: #{$weight}';
+  }
+}
+
+@mixin set-primary-font {
+  font-family: $font-primary;
+  font-size: $font-size-main;
+  @include set-font-weight(light);
+}
 
 // COLOURS
 $colors-primary: (

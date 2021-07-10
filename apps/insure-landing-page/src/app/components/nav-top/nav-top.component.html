@@ -1,0 +1,28 @@
+<nav class="nav-top">
+  <object class="img-logo"
+          data="assets/images/logo.svg"
+          type="image/svg+xml"></object>
+  <!-- nav menu -->
+  <div class="nav-top--menu"
+       [@showHide]="showHide">
+    <ul class="menu--links">
+      <li class="menu--link"><a href="#"
+           class="item__link">How we work</a></li>
+      <li class="menu--link"><a href="#"
+           class="item__link">Blog</a></li>
+      <li class="menu--link"><a href="#"
+           class="item__link">Account</a></li>
+      <li class="menu--link">
+        <button class="button__link">View plans</button>
+      </li>
+    </ul>
+  </div>
+  <a href="#"
+     class="menu__toggle"
+     (click)="toggleMenu()">
+    <object data="assets/images/icon-hamburger.svg"
+            type="image/svg+xml"
+            class="icon-hamburger"></object>
+  </a>
+
+</nav>
