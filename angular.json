@@ -51,7 +51,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -69,7 +68,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -97,7 +99,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/insure-landing-page/**"
+              "!apps/insure-landing-page/**/*"
             ]
           }
         },
@@ -105,10 +107,11 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/insure-landing-page/jest.config.js",
-            "tsConfig": "apps/insure-landing-page/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/insure-landing-page/src/test-setup.ts"
-          }
+            "passWithNoTests": true
+          },
+          "outputs": [
+            "coverage/apps/insure-landing-page"
+          ]
         }
       }
     },
@@ -138,7 +141,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/insure-landing-page-e2e/**"
+              "!apps/insure-landing-page-e2e/**/*"
             ]
           }
         }
@@ -159,7 +162,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/insure-landing-page/shared/assets/**"
+              "!libs/insure-landing-page/shared/assets/**/*"
             ]
           }
         },
@@ -167,9 +170,11 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/insure-landing-page/shared/assets/jest.config.js",
-            "tsConfig": "libs/insure-landing-page/shared/assets/tsconfig.spec.json",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/insure-landing-page/shared/assets"
+          ]
         }
       }
     },
@@ -188,7 +193,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/insure-landing-page/shared/styles/**"
+              "!libs/insure-landing-page/shared/styles/**/*"
             ]
           }
         },
@@ -196,9 +201,11 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/insure-landing-page/shared/styles/jest.config.js",
-            "tsConfig": "libs/insure-landing-page/shared/styles/tsconfig.spec.json",
             "passWithNoTests": true
-          }
+          },
+          "outputs": [
+            "coverage/libs/insure-landing-page/shared/styles"
+          ]
         }
       }
     }

@@ -1,9 +1,7 @@
 module.exports = {
-  testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
-  transform: {
-    '^.+\\.(ts|js|html)$': 'ts-jest',
-  },
-  resolver: '@nrwl/jest/plugins/resolver',
-  moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageReporters: ['html'],
+  projects: [
+    '<rootDir>/apps/insure-landing-page',
+    '<rootDir>/libs/insure-landing-page/shared/assets',
+    '<rootDir>/libs/insure-landing-page/shared/styles',
+  ],
 };
