@@ -1,7 +1,21 @@
 @use 'variables';
 
-.background {
-  width: 100%;
-  height: 100%;
-  background-color: map-get($map: variables.$colors-neutral, $key: light-grayish-cyan);
+:host {
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: map-get($map: variables.$colors-neutral, $key: dark-grayish-cyan);
+  }
+
+  .main-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    background-color: map-get($map: variables.$colors-neutral, $key: white);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
+
