@@ -1,0 +1,7 @@
+@use 'variables';
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: map-get($map: variables.$colors-neutral, $key: light-grayish-cyan);
+}

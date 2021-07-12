@@ -35,6 +35,13 @@
     },
     "insure-landing-page-shared-styles": {
       "tags": []
+    },
+    "tip-calculator": {
+      "tags": []
+    },
+    "tip-calculator-e2e": {
+      "tags": [],
+      "implicitDependencies": ["tip-calculator"]
     }
   },
   "affected": {
