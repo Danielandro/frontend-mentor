@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'tip-calculator';
+  public readonly billPlaceholder = 0;
+  private _billAmount = 0;
   public readonly tipAmounts = [5, 10, 15, 25, 50];
+
+  public onBillAmountChange(bill: number): void {
+    this._billAmount = bill;
+  }
 }

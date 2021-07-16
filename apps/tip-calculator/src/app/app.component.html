@@ -2,7 +2,8 @@
   <section class="main-content">
     <tip-input-field [title]="'Bill'"
                      [icon]="'assets/images/icon-dollar.svg'"
-                     [placeholder]="0">
+                     [placeholder]="billPlaceholder"
+                     (valueChangeEmt)="onBillAmountChange($event)">
     </tip-input-field>
     <tip-selector [title]="'Select Tip %'"
                   [amounts]="tipAmounts"></tip-selector>

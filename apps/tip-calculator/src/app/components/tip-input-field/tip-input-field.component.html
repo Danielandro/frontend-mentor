@@ -4,8 +4,10 @@
        [src]="icon"
        [alt]="title">
   <input class="field-form__input"
+         [placeholder]="placeholder"
+         [(ngModel)]="formValue"
+         (ngModelChange)="onValueChange($event)"
          type="number"
          name="field-value"
-         [placeholder]="placeholder"
          id="field-value">
 </section>
