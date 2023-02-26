@@ -2,7 +2,7 @@
 <button
   *ngFor="let amount of amounts"
   class="selector__btn"
-  [ngClass]="{ selected: amount === selectedAmount }"
+  [ngClass]="{ selected: amount === selectedPercentage }"
   (click)="onAmountSelected(amount)"
 >
   {{ amount }}

@@ -10,15 +10,19 @@
     <tip-selector
       [title]="'Select Tip %'"
       [amounts]="tipAmounts"
-      [selectedAmount]="selectedTipAmount"
+      [selectedPercentage]="selectedTipPercentage"
       (buttonSelectedEmt)="onTipSelected($event)"
     ></tip-selector>
     <tip-input-field
       [title]="'Number of People'"
       [icon]="'assets/images/icon-person.svg'"
-      [placeholder]="5"
+      [placeholder]="numberOfPeople"
+      (valueChangeEmt)="onNumOfPeopleEntered($event)"
     >
     </tip-input-field>
-    <tip-total [tipAmount]="0" [total]="0"></tip-total>
+    <tip-total
+      [tipAmountPerPerson]="tipAmountPerPerson"
+      [totalPerPerson]="totalPerPerson"
+    ></tip-total>
   </section>
 </section>
