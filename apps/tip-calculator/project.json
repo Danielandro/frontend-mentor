@@ -1,0 +1,99 @@
+{
+  "name": "tip-calculator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/tip-calculator/src",
+  "prefix": "frontend-mentor",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/tip-calculator",
+        "index": "apps/tip-calculator/src/index.html",
+        "main": "apps/tip-calculator/src/main.ts",
+        "polyfills": "apps/tip-calculator/src/polyfills.ts",
+        "tsConfig": "apps/tip-calculator/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/tip-calculator/src/favicon.ico",
+          "apps/tip-calculator/src/assets"
+        ],
+        "styles": ["apps/tip-calculator/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["apps/tip-calculator/styles"]
+        },
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/tip-calculator/src/environments/environment.ts",
+              "with": "apps/tip-calculator/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "tip-calculator:build:production"
+        },
+        "development": {
+          "browserTarget": "tip-calculator:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "tip-calculator:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/tip-calculator/src/**/*.ts",
+          "apps/tip-calculator/src/**/*.html"
+        ]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/tip-calculator"],
+      "options": {
+        "jestConfig": "apps/tip-calculator/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

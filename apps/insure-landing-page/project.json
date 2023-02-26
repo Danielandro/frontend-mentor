@@ -1,0 +1,109 @@
+{
+  "name": "insure-landing-page",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "sourceRoot": "apps/insure-landing-page/src",
+  "prefix": "frontend-mentor",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/insure-landing-page",
+        "index": "apps/insure-landing-page/src/index.html",
+        "main": "apps/insure-landing-page/src/main.ts",
+        "polyfills": "apps/insure-landing-page/src/polyfills.ts",
+        "tsConfig": "apps/insure-landing-page/tsconfig.app.json",
+        "aot": true,
+        "assets": [
+          "apps/insure-landing-page/src/favicon.ico",
+          "apps/insure-landing-page/src/assets",
+          {
+            "input": "libs/insure-landing-page/shared/assets/src/lib/images",
+            "glob": "*",
+            "output": "assets/images"
+          }
+        ],
+        "styles": ["apps/insure-landing-page/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/insure-landing-page/shared/styles/src/lib"]
+        },
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/insure-landing-page/src/environments/environment.ts",
+              "with": "apps/insure-landing-page/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "6kb",
+              "maximumError": "10kb"
+            }
+          ]
+        }
+      },
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "insure-landing-page:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "insure-landing-page:build:production"
+        }
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "insure-landing-page:build"
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "apps/insure-landing-page/tsconfig.app.json",
+          "apps/insure-landing-page/tsconfig.spec.json"
+        ],
+        "exclude": ["**/node_modules/**", "!apps/insure-landing-page/**/*"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/insure-landing-page/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "outputs": ["{workspaceRoot}/coverage/apps/insure-landing-page"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": [
+    "insure-landing-page-shared-assets",
+    "insure-landing-page-shared-styles"
+  ]
+}

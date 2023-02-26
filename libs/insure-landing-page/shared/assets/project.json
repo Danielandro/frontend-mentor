@@ -1,0 +1,33 @@
+{
+  "name": "insure-landing-page-shared-assets",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/insure-landing-page/shared/assets/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "libs/insure-landing-page/shared/assets/tsconfig.lib.json",
+          "libs/insure-landing-page/shared/assets/tsconfig.spec.json"
+        ],
+        "exclude": [
+          "**/node_modules/**",
+          "!libs/insure-landing-page/shared/assets/**/*"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/insure-landing-page/shared/assets/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/insure-landing-page/shared/assets"
+      ]
+    }
+  },
+  "tags": []
+}

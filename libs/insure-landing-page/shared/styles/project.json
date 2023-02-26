@@ -1,0 +1,33 @@
+{
+  "name": "insure-landing-page-shared-styles",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/insure-landing-page/shared/styles/src",
+  "projectType": "library",
+  "generators": {},
+  "targets": {
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "libs/insure-landing-page/shared/styles/tsconfig.lib.json",
+          "libs/insure-landing-page/shared/styles/tsconfig.spec.json"
+        ],
+        "exclude": [
+          "**/node_modules/**",
+          "!libs/insure-landing-page/shared/styles/**/*"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/insure-landing-page/shared/styles/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/insure-landing-page/shared/styles"
+      ]
+    }
+  },
+  "tags": []
+}

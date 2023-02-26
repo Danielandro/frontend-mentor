@@ -1,0 +1,30 @@
+{
+  "name": "insure-landing-page-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/insure-landing-page-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/insure-landing-page-e2e/cypress.json",
+        "tsConfig": "apps/insure-landing-page-e2e/tsconfig.e2e.json",
+        "devServerTarget": "insure-landing-page:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "insure-landing-page:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": ["apps/insure-landing-page-e2e/tsconfig.e2e.json"],
+        "exclude": ["**/node_modules/**", "!apps/insure-landing-page-e2e/**/*"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["insure-landing-page"]
+}

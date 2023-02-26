@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
@@ -7,5 +8,5 @@ module.exports = {
     '../../../../coverage/libs/insure-landing-page/shared/assets',
   globals: { 'ts-jest': { tsConfig: '<rootDir>/tsconfig.spec.json' } },
   displayName: 'insure-landing-page-shared-assets',
-  preset: '../../../../jest.preset.ts',
+  preset: '../../../../jest.preset.js',
 };
