@@ -1,5 +1,4 @@
 module.exports = {
-  preset: '../../jest.preset.js',
   coverageDirectory: '../../coverage/apps/insure-landing-page',
 
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
@@ -19,4 +18,5 @@ module.exports = {
     'jest-preset-angular/build/serializers/ng-snapshot',
     'jest-preset-angular/build/serializers/html-comment',
   ],
+  preset: '../../jest.preset.ts',
 };

@@ -1,5 +1,4 @@
 module.exports = {
-  preset: '../../../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
@@ -8,4 +7,5 @@ module.exports = {
     '../../../../coverage/libs/insure-landing-page/shared/styles',
   globals: { 'ts-jest': { tsConfig: '<rootDir>/tsconfig.spec.json' } },
   displayName: 'insure-landing-page-shared-styles',
+  preset: '../../../../jest.preset.ts',
 };

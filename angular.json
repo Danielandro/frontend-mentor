@@ -30,9 +30,13 @@
                 "output": "assets/images"
               }
             ],
-            "styles": ["apps/insure-landing-page/src/styles.scss"],
+            "styles": [
+              "apps/insure-landing-page/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/insure-landing-page/shared/styles/src/lib"]
+              "includePaths": [
+                "libs/insure-landing-page/shared/styles/src/lib"
+              ]
             },
             "scripts": []
           },
@@ -65,7 +69,9 @@
               ]
             }
           },
-          "outputs": ["{options.outputPath}"]
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -91,16 +97,21 @@
               "apps/insure-landing-page/tsconfig.app.json",
               "apps/insure-landing-page/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/insure-landing-page/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/insure-landing-page/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/insure-landing-page/jest.config.js",
+            "jestConfig": "apps/insure-landing-page/jest.config.ts",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/apps/insure-landing-page"]
+          "outputs": [
+            "coverage/apps/insure-landing-page"
+          ]
         }
       },
       "tags": [],
@@ -130,7 +141,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/insure-landing-page-e2e/tsconfig.e2e.json"],
+            "tsConfig": [
+              "apps/insure-landing-page-e2e/tsconfig.e2e.json"
+            ],
             "exclude": [
               "**/node_modules/**",
               "!apps/insure-landing-page-e2e/**/*"
@@ -139,7 +152,9 @@
         }
       },
       "tags": [],
-      "implicitDependencies": ["insure-landing-page"]
+      "implicitDependencies": [
+        "insure-landing-page"
+      ]
     },
     "insure-landing-page-shared-assets": {
       "root": "libs/insure-landing-page/shared/assets",
@@ -163,10 +178,12 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/insure-landing-page/shared/assets/jest.config.js",
+            "jestConfig": "libs/insure-landing-page/shared/assets/jest.config.ts",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/insure-landing-page/shared/assets"]
+          "outputs": [
+            "coverage/libs/insure-landing-page/shared/assets"
+          ]
         }
       },
       "tags": []
@@ -193,10 +210,12 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/insure-landing-page/shared/styles/jest.config.js",
+            "jestConfig": "libs/insure-landing-page/shared/styles/jest.config.ts",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/libs/insure-landing-page/shared/styles"]
+          "outputs": [
+            "coverage/libs/insure-landing-page/shared/styles"
+          ]
         }
       },
       "tags": []
@@ -209,7 +228,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/tip-calculator",
             "index": "apps/tip-calculator/src/index.html",
@@ -221,9 +242,13 @@
               "apps/tip-calculator/src/favicon.ico",
               "apps/tip-calculator/src/assets"
             ],
-            "styles": ["apps/tip-calculator/src/styles.scss"],
+            "styles": [
+              "apps/tip-calculator/src/styles.scss"
+            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["apps/tip-calculator/styles"]
+              "includePaths": [
+                "apps/tip-calculator/styles"
+              ]
             },
             "scripts": []
           },
@@ -286,13 +311,17 @@
               "apps/tip-calculator/src/**/*.html"
             ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tip-calculator"],
+          "outputs": [
+            "coverage/apps/tip-calculator"
+          ],
           "options": {
-            "jestConfig": "apps/tip-calculator/jest.config.js",
+            "jestConfig": "apps/tip-calculator/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -320,13 +349,19 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/tip-calculator-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/tip-calculator-e2e/**/*.{js,ts}"
+            ]
           },
-          "outputs": ["{options.outputFile}"]
+          "outputs": [
+            "{options.outputFile}"
+          ]
         }
       },
       "tags": [],
-      "implicitDependencies": ["tip-calculator"]
+      "implicitDependencies": [
+        "tip-calculator"
+      ]
     }
   }
 }
