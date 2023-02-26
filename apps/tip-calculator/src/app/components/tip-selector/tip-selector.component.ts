@@ -1,18 +1,19 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'tip-selector',
   templateUrl: './tip-selector.component.html',
-  styleUrls: ['./tip-selector.component.scss']
+  styleUrls: ['./tip-selector.component.scss'],
 })
-export class TipSelectorComponent implements OnInit {
+export class TipSelectorComponent {
   @Input() title: string | undefined;
   @Input() amounts: number[] | undefined;
+  @Input() selectedAmount: number | null = null;
 
   @Output() buttonSelectedEmt = new EventEmitter<number>();
-  constructor() {}
+  // constructor() {}
 
-  ngOnInit(): void {
+  public onAmountSelected(amount: number): void {
+    this.buttonSelectedEmt.emit(+amount);
   }
-
 }

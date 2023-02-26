@@ -1,7 +1,10 @@
 <h1 class="selector__title">{{ title }}</h1>
-<button *ngFor="let amount of amounts"
-        class="selector__btn">{{ amount }}</button>
-<input type="number"
-       name="custom-tip"
-       id="custom-tip"
-       placeholder="Custom">
+<button
+  *ngFor="let amount of amounts"
+  class="selector__btn"
+  [ngClass]="{ selected: amount === selectedAmount }"
+  (click)="onAmountSelected(amount)"
+>
+  {{ amount }}
+</button>
+<input type="number" name="custom-tip" id="custom-tip" placeholder="Custom" />

@@ -1,17 +1,24 @@
 <section class="container">
   <section class="main-content">
-    <tip-input-field [title]="'Bill'"
-                     [icon]="'assets/images/icon-dollar.svg'"
-                     [placeholder]="billPlaceholder"
-                     (valueChangeEmt)="onBillAmountChange($event)">
+    <tip-input-field
+      [title]="'Bill'"
+      [icon]="'assets/images/icon-dollar.svg'"
+      [placeholder]="billPlaceholder"
+      (valueChangeEmt)="onBillAmountChange($event)"
+    >
     </tip-input-field>
-    <tip-selector [title]="'Select Tip %'"
-                  [amounts]="tipAmounts"></tip-selector>
-    <tip-input-field [title]="'Number of People'"
-                     [icon]="'assets/images/icon-person.svg'"
-                     [placeholder]="5">
+    <tip-selector
+      [title]="'Select Tip %'"
+      [amounts]="tipAmounts"
+      [selectedAmount]="selectedTipAmount"
+      (buttonSelectedEmt)="onTipSelected($event)"
+    ></tip-selector>
+    <tip-input-field
+      [title]="'Number of People'"
+      [icon]="'assets/images/icon-person.svg'"
+      [placeholder]="5"
+    >
     </tip-input-field>
-    <tip-total [tipAmount]="0"
-               [total]="0"></tip-total>
+    <tip-total [tipAmount]="0" [total]="0"></tip-total>
   </section>
 </section>
