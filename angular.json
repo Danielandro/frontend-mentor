@@ -102,7 +102,12 @@
           },
           "outputs": ["coverage/apps/insure-landing-page"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": [
+        "insure-landing-page-shared-assets",
+        "insure-landing-page-shared-styles"
+      ]
     },
     "insure-landing-page-e2e": {
       "root": "apps/insure-landing-page-e2e",
@@ -132,7 +137,9 @@
             ]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["insure-landing-page"]
     },
     "insure-landing-page-shared-assets": {
       "root": "libs/insure-landing-page/shared/assets",
@@ -161,7 +168,8 @@
           },
           "outputs": ["coverage/libs/insure-landing-page/shared/assets"]
         }
-      }
+      },
+      "tags": []
     },
     "insure-landing-page-shared-styles": {
       "root": "libs/insure-landing-page/shared/styles",
@@ -190,7 +198,8 @@
           },
           "outputs": ["coverage/libs/insure-landing-page/shared/styles"]
         }
-      }
+      },
+      "tags": []
     },
     "tip-calculator": {
       "projectType": "application",
@@ -213,7 +222,7 @@
               "apps/tip-calculator/src/assets"
             ],
             "styles": ["apps/tip-calculator/src/styles.scss"],
-             "stylePreprocessorOptions": {
+            "stylePreprocessorOptions": {
               "includePaths": ["apps/tip-calculator/styles"]
             },
             "scripts": []
@@ -276,7 +285,8 @@
               "apps/tip-calculator/src/**/*.ts",
               "apps/tip-calculator/src/**/*.html"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -286,7 +296,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "tip-calculator-e2e": {
       "root": "apps/tip-calculator-e2e",
@@ -310,30 +321,12 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/tip-calculator-e2e/**/*.{js,ts}"]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["tip-calculator"]
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "analytics": "99e89d1d-031a-464d-bf23-86ba0086c60a"
-  },
-  "schematics": {
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
-  "defaultProject": "insure-landing-page"
+  }
 }
