@@ -5,6 +5,7 @@
   "scripts": {
     "------- ADDED SCRIPTS ---------": "",
     "start-tip-calculator": "ng serve tip-calculator",
+    "start-insure-landing-page": "ng serve insure-landing-page",
     "------ NX SCRIPTS ----------------": "",
     "ng": "nx",
     "nx": "nx",
