@@ -1,0 +1,6 @@
+@use 'variables';
+
+.field-title {
+  color: map-get($map: variables.$colors-neutral, $key: dark-grayish-cyan);
+  font-size: 1rem;
+}

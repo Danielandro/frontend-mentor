@@ -1,13 +1,13 @@
-<h1 class="field-title">{{ title }}</h1>
+<h3 class="field-title">{{ title }}</h3>
 <section class="field-form">
-  <img class="field-form__icon"
-       [src]="icon"
-       [alt]="title">
-  <input class="field-form__input"
-         [placeholder]="placeholder"
-         [(ngModel)]="formValue"
-         (ngModelChange)="onValueChange($event)"
-         type="number"
-         name="field-value"
-         id="field-value">
+  <img class="field-form__icon" [src]="icon" [alt]="title" />
+  <input
+    class="field-form__input"
+    [placeholder]="placeholder"
+    [(ngModel)]="formValue"
+    (ngModelChange)="onValueChange($event)"
+    type="number"
+    name="field-value"
+    id="field-value"
+  />
 </section>

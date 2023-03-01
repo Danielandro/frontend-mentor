@@ -8,13 +8,14 @@ $colors-neutral: (
   medium-grayish-cyan: hsl(184, 14%, 56%),
   light-grayish-cyan: hsl(185, 41%, 84%),
   lighter-grayish-cyan: hsl(189, 41%, 97%),
-  white: hsl(0, 0%, 100%)
+  white: hsl(0, 0%, 100%),
 );
 
+$lll: hsl(183, 100%, 15%); // TODO: used for debugging - delete
 
 // Typography
 $font-sizes: (
-  form-inputs: 24px
+  form-inputs: 24px,
 );
 
 $font-weights: (
@@ -24,4 +25,3 @@ $font-weights: (
 );
 
 $font-primary: 'Space Mono', monospace;
-

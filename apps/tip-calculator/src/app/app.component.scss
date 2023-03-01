@@ -5,7 +5,12 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: map-get($map: variables.$colors-neutral, $key: dark-grayish-cyan);
+    background-color: map-get(
+      $map: variables.$colors-neutral,
+      $key: light-grayish-cyan
+    );
+    display: flex;
+    flex-direction: column;
   }
 
   .main-content {
@@ -16,6 +21,12 @@
     background-color: map-get($map: variables.$colors-neutral, $key: white);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    padding: 0 20px;
+  }
+
+  .header {
+    text-align: center;
+    color: map-get($map: variables.$colors-neutral, $key: very-dark-cyan);
+    letter-spacing: 0.6rem;
   }
 }
-

@@ -1,10 +1,12 @@
-<h1 class="selector__title">{{ title }}</h1>
-<button
-  *ngFor="let amount of amounts"
-  class="selector__btn"
-  [ngClass]="{ selected: amount === selectedPercentage }"
-  (click)="onAmountSelected(amount)"
->
-  {{ amount }}
-</button>
+<h3 class="field-title">{{ title }}</h3>
+<div class="buttons">
+  <button
+    *ngFor="let amount of amounts"
+    class="tip-button"
+    [ngClass]="{ selected: amount === selectedPercentage }"
+    (click)="onAmountSelected(amount)"
+  >
+    {{ amount }}%
+  </button>
+</div>
 <input type="number" name="custom-tip" id="custom-tip" placeholder="Custom" />
